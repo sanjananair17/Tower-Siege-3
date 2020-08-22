@@ -4,9 +4,10 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
-var polygonImg;
+var polygon_img, polygonBody;
+
 function preload() {
-  polygonImg = loadImage("red_octagon.png")
+  polygon_img = loadImage("red_octagon.png")
 }
 
 function setup() {
@@ -44,17 +45,16 @@ function setup() {
 
   box21 = new BaseClass(500, 165, 50, 50);
 
-  polygon = Matter.Bodies.polygon(100, 200, 8, 20);
-  World.add(world, polygon);
-
   imageMode(CENTER);
-  image(polygonImg, polygon.position.x, polygon.position.y);
+  polygonBody = Bodies.circle(50, 200, 20);
+  World.add(world, polygonBody);
 
-  sling = new SlingShot(this.polygon,{x:100, y:200});
+  sling = new SlingShot(polygonBody,{x:100, y:200});
 }
 
 function draw() {
   background(0); 
+  Engine.update(engine);
 
   ground.display();
   stand.display();
@@ -88,11 +88,13 @@ function draw() {
 
   sling.display();
 
+  image(polygon_img, polygonBody.position.x, polygonBody.position.y, 40, 40);
+
   drawSprites();
 }
 
 function mouseDragged(){
-  Matter.Body.setPosition(polygon.body, {x: mouseX , y: mouseY});
+  Matter.Body.setPosition(polygonBody.body, {x: mouseX , y: mouseY});
 }
 
 function mouseReleased(){
