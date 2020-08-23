@@ -4,6 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
+var score = 0;
 
 function setup() {
   var canvas = createCanvas(1000,600);
@@ -78,6 +79,37 @@ function draw() {
   box20.display();
 
   box21.display();
+
+  box1.score();
+  box2.score();
+  box3.score();
+  box4.score();
+  box5.score();
+  box6.score();
+
+  box7.score();
+  box8.score();
+  box9.score();
+  box10.score();
+  box11.score();
+
+  box12.score();
+  box13.score();
+  box14.score();
+  box15.score();
+
+  box16.score();
+  box17.score();
+  box18.score();
+
+  box19.score();
+  box20.score();
+
+  box21.score();
+  
+  textSize(30);
+  fill("white");
+  text("SCORE: "+score, 750, 40);
 
   sling.display(); 
   polygon.display();

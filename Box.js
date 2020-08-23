@@ -7,7 +7,7 @@ class Box{
   this.body = Bodies.rectangle(x, y, width, height, options);
   this.width = width; this.height = height; 
   World.add(world, this.body); 
-  this.visiblity = 255;
+  this.Visiblity = 255;
 } 
   display(){ 
     if(this.body.speed < 4){
@@ -24,9 +24,15 @@ class Box{
     } else {
         World.remove(world, this.body);
         push();
-        this.visibility = this.visibilty - 5;
-        tint(255,this.visibility);
+        this.Visibility = this.Visibilty - 5;
+        tint(255,this.Visibility);
         pop();
+    }
+  }
+
+  score(){
+    if(this.Visibility<0 && this.Visibility> -105){
+      score++;
     }
   }
 }
