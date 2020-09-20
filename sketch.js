@@ -12,8 +12,8 @@ function setup() {
   world = engine.world;
   Engine.run(engine);
 
-  polygon = new Polygon(50,200,20);
-  sling = new SlingShot(polygon.body,{x: 100, y: 200});
+  polygon = new Polygon(50,200,-20);
+  sling = new SlingShot(polygon.body,{x: 150, y: 200});
 
   ground = new Ground(500, 580, 1000, 40);
   stand = new Ground(500,450,300,20);
@@ -80,7 +80,7 @@ function draw() {
 
   box21.display();
 
-  box1.score();
+  /*box1.score();
   box2.score();
   box3.score();
   box4.score();
@@ -105,14 +105,14 @@ function draw() {
   box19.score();
   box20.score();
 
-  box21.score();
+  box21.score();*/
   
   textSize(30);
   fill("white");
   text("SCORE: "+score, 750, 40);
-
-  sling.display(); 
+ 
   polygon.display();
+  sling.display();
 
   drawSprites();
 }
