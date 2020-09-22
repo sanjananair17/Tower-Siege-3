@@ -8,7 +8,7 @@ class Polygon{
         this.x=x;
         this.y=y;
         this.image= loadImage("red_octagon.png");
-        this.body = Bodies.circle(x,y,radius,options);
+        this.body = Bodies.circle(x,y,(radius)/2,options);
         World.add(world, this.body);
      }
      display(){

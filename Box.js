@@ -14,7 +14,7 @@ class Box{
       var angle = this.body.angle; 
       var pos= this.body.position; 
       strokeWeight(0.8);
-      fill("brown");
+      fill("green");
       push(); 
       translate(pos.x, pos.y); 
       rotate(angle); 
