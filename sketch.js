@@ -44,6 +44,91 @@ function setup() {
   box20 = new Box(525, 215, 50, 50);
 
   box21 = new Box(500, 165, 50, 50);
+
+  if(box1.body.speed >= 4){
+    box1.remove();
+    score++;
+  }
+  if(box2.body.speed >= 4){
+    box2.remove();
+    score++;
+  }
+  if(box3.body.speed >= 4){
+    box3.remove();
+    score = score + 1;
+  }
+  if(box4.body.speed >= 4){
+    box4.remove();
+    score = score + 1;
+  }
+  if(box5.body.speed >= 4){
+    box5.remove();
+    score = score + 1;
+  }
+  if(box6.body.speed >= 4){
+    box6.remove();
+    score = score + 1;
+  }
+  if(box7.body.speed >= 4){
+    box7.remove();
+    score = score + 1;
+  }
+  if(box8.body.speed >= 4){
+    box8.remove();
+    score = score + 1;
+  }
+  if(box9.body.speed >= 4){
+    box9.remove();
+    score = score + 1;
+  }
+  if(box10.body.speed >= 4){
+    box10.remove();
+    score = score + 1;
+  }
+  if(box11.body.speed >= 4){
+    box11.remove();
+    score = score + 1;
+  }
+  if(box12.body.speed >= 4){
+    box12.remove();
+    score = score + 1;
+  }
+  if(box13.body.speed >= 4){
+    box13.remove();
+    score = score + 1;
+  }
+  if(box14.body.speed >= 4){
+    box14.remove();
+    score = score + 1;
+  }
+  if(box15.body.speed >= 4){
+    box15.remove();
+    score = score + 1;
+  }
+  if(box16.body.speed >= 4){
+    box16.remove();
+    score = score + 1;
+  }
+  if(box17.body.speed >= 4){
+    box17.remove();
+    score = score + 1;
+  }
+  if(box18.body.speed >= 4){
+    box18.remove();
+    score = score + 1;
+  }
+  if(box19.body.speed >= 4){
+    box19.remove();
+    score = score + 1;
+  }
+  if(box20.body.speed >= 4){
+    box20.remove();
+    score = score + 1;
+  }
+  if(box21.body.speed >= 4){
+    box21.remove();
+    score = score + 1;
+  }
 }
 
 function draw() {
@@ -79,33 +164,6 @@ function draw() {
   box20.display();
 
   box21.display();
-
-  /*box1.score();
-  box2.score();
-  box3.score();
-  box4.score();
-  box5.score();
-  box6.score();
-
-  box7.score();
-  box8.score();
-  box9.score();
-  box10.score();
-  box11.score();
-
-  box12.score();
-  box13.score();
-  box14.score();
-  box15.score();
-
-  box16.score();
-  box17.score();
-  box18.score();
-
-  box19.score();
-  box20.score();
-
-  box21.score();*/
   
   textSize(30);
   fill("white");

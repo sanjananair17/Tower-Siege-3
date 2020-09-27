@@ -22,8 +22,10 @@ class Box{
       rect(0,0,this.width, this.height); 
       pop(); 
     } else {
-        World.remove(world, this.body);
-        score=score+1
+        this.remove();
     }
+  }
+  remove(){
+    World.remove(world,this.body);
   }
 }
